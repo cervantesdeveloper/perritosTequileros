@@ -4,7 +4,7 @@ const DeviceContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 const DeviceProvider = ({children})=>{
-    let breakpoint = window.matchMedia("(max-width: 767px)");
+    let breakpoint = window.matchMedia("(max-width: 1023px)");
 
     const [isMobil, setIsMobil] = useState(breakpoint.matches);
 

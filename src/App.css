@@ -161,6 +161,40 @@ a{
 
 /*Header end*/
 
+/*hero estart*/
+.hero{
+  position: relative;
+  height: calc(100vh - var(--header-height) );
+  overflow: hidden;
+}
+
+.hero > img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero a{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3rem;
+}
+@media (min-width: 1024px) {
+  .hero{
+    height: calc(100vh - (var(--header-height) * 2));
+  }
+
+  .hero > img{
+    width: 100%;
+  }
+  
+}
+/*hero end*/
+
+/*nav mobil estart*/
 .navMobil{
   position: fixed;
   z-index: 90;
@@ -191,3 +225,7 @@ a{
 .navMobil.navOpen{
   transform: translateX(0);
 }
+
+
+/*nav mobil end*/
+

@@ -78,6 +78,18 @@ h2{
 /* burger end*/
 
 /***** Utilities *****/
+.black{
+  background-color: var(--black);
+  color: var(--light-grey);
+}
+
+.black h2{
+  font-family: var(--font-header);
+}
+
+.black span{
+  color: var(--cta);
+}
 
 .btn-cta{
   display: flex;
@@ -111,8 +123,11 @@ h2{
 
 .container{
   padding: 1.25rem;
-  margin: 0 auto;
+}
+
+.contain{
   max-width: 75rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -217,6 +232,18 @@ h2{
 }
 /*hero end*/
 
+/*mision start*/
+.mision{
+  text-align: center;
+}
+
+.mision a{
+  display: inline-block;
+  margin-top: 2.5rem;
+}
+
+/*mision end*/
+
 /*nav mobil estart*/
 .navMobil{
   position: fixed;
@@ -263,7 +290,8 @@ h2{
 }
 
 .quote blockquote,
-.quote p{
+.quote p,
+.mision blockquote{
   font-size: 1.125rem;
   line-height: 2;
 }
@@ -274,7 +302,8 @@ h2{
 
 @media (min-width: 768px) {
   .quote blockquote,
-  .quote p{
+  .quote p,
+  .mision blockquote{
     font-size: 1.5rem;
     line-height: 2;
   }

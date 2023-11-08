@@ -1,4 +1,5 @@
 import StatsCarousel from "./StatsCarousel";
+import StatsGrid from "./StatsGrid";
 
 export default function Stats(){
     let mobile = {
@@ -31,6 +32,6 @@ export default function Stats(){
         isMobil = false
     }
     return (
-      isMobil ? <StatsCarousel /> : null
+      isMobil ? <StatsCarousel /> : <StatsGrid />
     )
 }

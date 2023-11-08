@@ -341,17 +341,41 @@ h2{
   line-height: 1.25;
 }
 
+.stats-grid{
+  margin: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 50vw);
+}
+
+
+@media (min-aspect-ratio: 4/3) {
+  .stats-grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25vw;
+  }
+}
+
+
 /*stats end*/
 
 /*swiper stats start*/
 .swiper{
   width: 100%;
-  height: calc(100vh - (var(--header-height)*3));
+  height: 100vw;
   margin: 6rem 0;
 }
 
 .swiper-pagination-bullet{
   background: var(--light-grey)!important;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .swiper{
+    height: calc(100vh - var(--header-height));
+    width: calc(100vh - var(--header-height));
+    margin: 6rem 0;
+  }
 }
 
 

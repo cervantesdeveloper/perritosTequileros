@@ -309,4 +309,50 @@ h2{
   }
 }
 /*quote end*/
+/*stats start*/
+.stat{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: var(--light-grey);
+}
 
+.stat img{
+  height: 100%;
+  width: auto;
+}
+
+.stat .data{
+  width: 100%;
+  bottom: 0;
+  padding: 0 1rem 2rem;
+  position: absolute;
+  background: var(--black);
+  background: linear-gradient(0deg, var(--black) 0%, rgba(255,255,255,0) 100%);
+}
+
+.stat b{
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.stat p{
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+/*stats end*/
+
+/*swiper stats start*/
+.swiper{
+  width: 100%;
+  height: calc(100vh - (var(--header-height)*3));
+  margin: 6rem 0;
+}
+
+.swiper-pagination-bullet{
+  background: var(--light-grey)!important;
+}
+
+
+/*swiper stats end */

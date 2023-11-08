@@ -1,5 +1,6 @@
 import Hero from "../components/Hero"
 import Mision from "../components/Mision"
+import Stats from "../components/Stasts"
 
 export default function Home(){
     return (
@@ -22,6 +23,7 @@ export default function Home(){
                 </div>
             </div>
             <Mision />
+            <Stats />
         </>
         
     )

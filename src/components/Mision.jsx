@@ -9,7 +9,10 @@ export default function Mision(){
                     Nuestra meta es clara y profundamente motivada por nuestro deseo de mantener a los perros en sus amados hogares: 
                     Buscamos mejorar las vidas y bienestar de los perros y personas, colectivamente y quizás lo más importante, una vida, una necesidad, un perro a la vez.
                 </blockquote>
-                <ButtonLink text="Conocenos"/>
+                <ButtonLink 
+                    text="Conocenos"
+                    link="/about"
+                />
             </div>
         </div>
     )

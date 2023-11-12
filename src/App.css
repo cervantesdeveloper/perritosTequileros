@@ -138,6 +138,13 @@ h2{
 
 /***** Site Style *****/
 
+/* Adopt home section starts */
+.adopt-home{
+  text-align: center;
+}
+
+/* Adopt home section ends */
+
 /*Header start*/
 .header{
   z-index: 100;

@@ -1,3 +1,4 @@
+import AdoptHome from "../components/AdoptHome"
 import Hero from "../components/Hero"
 import Mision from "../components/Mision"
 import Stats from "../components/Stasts"
@@ -24,6 +25,7 @@ export default function Home(){
             </div>
             <Mision />
             <Stats />
+            <AdoptHome />
         </>
         
     )

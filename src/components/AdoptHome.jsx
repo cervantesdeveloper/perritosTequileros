@@ -24,6 +24,7 @@ export default function AdoptHome(){
             
     }, [])
     console.log(dogs);
+    
     return(
         <div className="container black adopt-home">
             <div className="contain">
@@ -45,8 +46,10 @@ export default function AdoptHome(){
                                         genre={dog.content.rendered.replace("<p>", " ").split(" ")[3]}
                                         id={dog.content.rendered.replace("<p>", " ").replace("</p>", "").split(" ")[4]}
                                         picture={dog._embedded["wp:featuredmedia"][0].source_url}
+                                        excerpt={dog.excerpt.rendered.replace("<p>", " ").replace("</p>", "")}
                                     />
                                 )
+                                
                             }
                         </div>
                         )

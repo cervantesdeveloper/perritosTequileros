@@ -26,7 +26,70 @@ h2{
   margin: 2.5rem 0;
 }
 
+h4{
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 /***** Components *****/
+
+/* adopt card component starts */
+.card-adoption{
+  border: 1px solid var(--cta);
+  max-width: 21rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.card-adoption__title,
+.card-adoption__suporting-text{
+  padding: 1rem;
+}
+
+.card-adoption img{
+  width: 100%;
+  height: auto;
+}
+
+.card-adoption__suporting-text{
+  overflow: hidden;
+  position: relative;
+}
+
+.card-adoption__suporting-text ul{
+  list-style: none;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+.card-adoption__suporting-text .excerpt{
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  font-size: 1.125rem;
+  line-height: 2;
+  text-align: left;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  transition: transform .3s ease-in-out;
+}
+
+.card-adoption__suporting-text .excerpt-opened{
+  transform: translateX(-100%);
+}
+
+.card-adoption__suporting-text .plus-icon{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+/* adopt card component ends */
 
 /* burger start*/
 .burger {
@@ -35,7 +98,7 @@ h2{
   height: 1.25rem;
 }
 
-.burger span {
+.burger span{
   position: absolute;
   height: .25rem;
   width: 100%;
@@ -77,6 +140,53 @@ h2{
 }
 /* burger end*/
 
+/* plus icon starts */
+.plus-icon {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem;
+  z-index: 80;
+}
+
+.plus-icon span{
+  position: absolute;
+  height: .25rem;
+  width: 100%;
+  background-color: var(--inherit-color);
+  transition: 
+    transform .3s ease-in-out, 
+    opacity .3s ease-in-out, 
+    width .3s ease-in-out
+  ;
+} 
+
+.plus-icon span:first-child{
+  top: .8125rem;
+  left: 0;
+  transform: rotate(90deg);
+  
+}
+
+.plus-icon span:last-child{
+  top: .8125rem;
+  left: 0;
+}
+
+.plus-icon.minus-icon span{
+  transition: 
+    transform .3s ease-in-out,
+    opacity .3s ease-in-out,
+    width .3s ease-in-out
+  ;
+}
+
+.plus-icon.minus-icon span:first-child,
+.plus-icon.minus-icon span:last-child {
+  transform: rotate(0deg)
+}
+
+/* plus icon ends */
+
 /***** Utilities *****/
 .black{
   background-color: var(--black);
@@ -103,6 +213,8 @@ h2{
   color: var(--light-grey);
   background-color: var(--cta);
   padding: .75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-cta img{
@@ -141,6 +253,19 @@ h2{
 /* Adopt home section starts */
 .adopt-home{
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .adopt-home__gallery{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 5rem;
+    }
+
+    .adopt-home__gallery > *{
+      margin-left: 0;
+      margin-right: 0;
+    }
 }
 
 /* Adopt home section ends */

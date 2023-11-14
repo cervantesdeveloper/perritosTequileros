@@ -1,6 +1,7 @@
 import AdoptHome from "../components/AdoptHome"
 import Hero from "../components/Hero"
 import Mision from "../components/Mision"
+import NewsHome from "../components/NewsHome"
 import Stats from "../components/Stasts"
 
 export default function Home(){
@@ -26,6 +27,7 @@ export default function Home(){
             <Mision />
             <Stats />
             <AdoptHome />
+            <NewsHome />
         </>
         
     )

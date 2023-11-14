@@ -14,16 +14,17 @@ export default function AdoptHome(){
             let res = await fetch(link),
                 json = await res.json(),
                 reverse = await json.reverse();
-
                 for(let i = 0; i < 3; i++){
-                    setDogs(dogs => [...dogs, reverse[i]])
+                    if(reverse[i].categories[0] === 3){
+                        setDogs(dogs => [...dogs, reverse[i]])
+                    }
                 }
         }
 
         getDogs("https://perritos.cervantesdeveloper.com/wp-json/wp/v2/posts?_embed");
             
     }, [])
-    console.log(dogs);
+    
     
     return(
         <div className="container black adopt-home">

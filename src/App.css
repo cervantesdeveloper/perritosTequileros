@@ -91,6 +91,47 @@ h4{
 
 /* adopt card component ends */
 
+/* article-news starts*/
+.article-news h2{
+  color: var(--black);
+  text-align: center;
+}
+
+.article-news p{
+  font-size: 1.125rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+p.article-news__date{
+  margin-bottom: 2.5rem;
+  color: var(--green);
+}
+
+.article-news img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .article-news__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    align-items: center;
+  }
+
+  .article-news__content p {
+    font-size: 1.5rem;
+    grid-column: 2 / 4;
+  }
+
+}
+
+
+/* article-news ends*/
+
 /* burger start*/
 .burger {
   position: relative;
@@ -391,13 +432,15 @@ h4{
 /*Header end*/
 
 /*hero estart*/
-.hero{
+.hero,
+.hero-pages{
   position: relative;
   height: calc(100vh - var(--header-height) );
   overflow: hidden;
 }
 
-.hero > img{
+.hero > img,
+.hero-pages > img{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -412,16 +455,36 @@ h4{
   bottom: 3rem;
 }
 @media (min-width: 1024px) {
-  .hero{
+  .hero,
+  .hero-pages{
     height: calc(100vh - (var(--header-height) * 2));
   }
 
-  .hero > img{
+  .hero > img,
+  .hero-pages > img{
     width: 100%;
   }
   
 }
 /*hero end*/
+
+/*hero-pages estart*/
+.hero-pages h1{
+  position: absolute;
+  left: 6.25vw;
+  top: 12.5%;
+  font-size: 16vw;
+  line-height: 1;
+  color: var(--light-grey);
+}
+
+@media (min-width: 1024px) {
+  .hero-pages h1{
+    font-size: 8vw;
+  }
+}
+
+/*hero-pages ends*/
 
 /*mision start*/
 .mision{

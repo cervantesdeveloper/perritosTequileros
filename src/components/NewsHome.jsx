@@ -50,6 +50,7 @@ export default function NewsHome(){
                                     title={element.title.rendered}
                                     date={findDate(element.excerpt.rendered)}
                                     hour={findHour(element.excerpt.rendered)}
+                                    id={element.id}
                                 />
                             )
                     }

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import TextLink from "./TextLink";
 
-export default function NewsCard({picture, title, date, hour}){
+export default function NewsCard({picture, title, date, hour, id}){
     return(
         <figure className="news-card">
             <div className="news-card__media">
@@ -15,7 +15,7 @@ export default function NewsCard({picture, title, date, hour}){
                 <p>Hora: {hour}</p>
             </div>
             
-            <TextLink text="Leer Más" link="/#"/>
+            <TextLink text="Leer Más" link={`/news/${id}`}/>
         </figure>
     )
 }
@@ -24,5 +24,6 @@ NewsCard.propTypes = {
     picture: PropTypes.string,
     title: PropTypes.string,
     date: PropTypes.string,
-    hour: PropTypes.string
+    hour: PropTypes.string,
+    id: PropTypes.number
 }

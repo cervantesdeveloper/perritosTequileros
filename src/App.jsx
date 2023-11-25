@@ -5,6 +5,7 @@ import About from './pages/About'
 import News from './pages/News'
 import Home from './pages/Home'
 import Paypal from './pages/Paypal'
+import NewsSingle from './pages/NewsSingle'
 
 import Header from './components/Header'
 import NavMobil from './components/NavMobil'
@@ -31,6 +32,7 @@ function App() {
         <Route path='/adopt' element={<Adopt />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/news' element={<News />}/>
+        <Route path='/news/:id' element={<NewsSingle />}/>
         <Route path='/donate' element={<Paypal />}/>
       </Routes>
       </DeviceProvider>

@@ -17,7 +17,7 @@ export default function Header(){
     return(
         <header className="header">
             <Link to="/">
-                <img src="logo.png" alt="Perritos Tequileros" onClick={burgerClick}/>
+                <img src="http://localhost:5173/logo.png" alt="Perritos Tequileros"/>
             </Link>
             {isMobil 
                 ? <Burger burgerClick={burgerClick} open={isOpen}/> 

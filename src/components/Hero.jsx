@@ -11,7 +11,7 @@ export default function Hero({image, alt}){
     return(
         <div className="hero">
             
-            <img src={`./src/assets/hero_${image}.jpg`} alt={alt}/>
+            <img src={`http://localhost:5173/hero_${image}.jpg`} alt={alt}/>
             
             {isMobil && <ButtonDonate />}
         </div>

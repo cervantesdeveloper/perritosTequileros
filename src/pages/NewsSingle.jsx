@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 
 import HeroPages from "../components/HeroPages"
@@ -15,7 +15,8 @@ export default function NewsSingle(){
         image: "",
         content: ""
     });
-    const [otherNotes, setOtherNotes] = useState({});
+    const [notePrev, setNotePrev] = useState(false);
+    const [noteProx, setNoteProx] = useState(false);
 
     const getNote = async(link)=>{
         let res = await fetch(link),
@@ -41,16 +42,10 @@ export default function NewsSingle(){
                             content: newsArray[i].content.rendered,
                         }
                     });
+                    setNoteProx(newsArray[i - 1] ? newsArray[i - 1].id : 0);
+                    setNotePrev(newsArray[i + 1] ? newsArray[i + 1].id : 0);
                 }
             }
-
-            setOtherNotes(otherNotes=>{
-                return{
-                    ...otherNotes,
-                    prevNote: indexArray[currentIndex + 1],
-                    nextNote: indexArray[currentIndex - 1]
-                }
-            })
             
     }
 
@@ -58,7 +53,7 @@ export default function NewsSingle(){
         getNote("https://perritos.cervantesdeveloper.com/wp-json/wp/v2/posts?_embed");
     }, [params.id])
 
-    console.log(otherNotes);
+    console.log(notePrev, noteProx);
 
     return(
         <>
@@ -79,8 +74,8 @@ export default function NewsSingle(){
             <NewsFooter 
                 totalNotes={notesLength}
                 currentNote={currentIndex}
-                prevNews={`/news/${otherNotes.prevNote}`}
-                proxNews={`/news/${otherNotes.nextNote}`}
+                prevNews={`/news/${notePrev}`}
+                proxNews={`/news/${noteProx}`}
             />
             
         </>

@@ -6,34 +6,40 @@ import News from './pages/News'
 import Home from './pages/Home'
 import Paypal from './pages/Paypal'
 import NewsSingle from './pages/NewsSingle'
+import AdoptProcess from './pages/adopt/AdoptProcess'
+import AdoptDogs from './pages/adopt/AdoptDogs'
 
-import Header from './components/Header'
-import NavMobil from './components/NavMobil'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { MenuProvider } from './context/MenuContext'
 import { DeviceProvider } from './context/DeviceContext'
+
+import Layout from './components/Layout'
+import AdoptionLayout from './components/AdoptionLayout'
+
 
 
 function App() {
 
   return (
     <BrowserRouter>
-    
       <DeviceProvider>
-      <MenuProvider>
-        <Header />
-        <NavMobil />
-      </MenuProvider>
-      
-
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/adopt' element={<Adopt />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/news' element={<News />}/>
-        <Route path='/news/:id' element={<NewsSingle />}/>
-        <Route path='/donate' element={<Paypal />}/>
+        <Route element={<Layout/>}> 
+          <Route path='/' element={<Home />} />
+
+          <Route path='/adopt' element={<AdoptionLayout />}>
+            <Route path='/adopt' element={<Adopt />}/>
+            <Route path='/adopt/process' element={<AdoptProcess />}/>
+            <Route path='/adopt/dogs' element={<AdoptDogs />} />
+          </ Route>
+
+          <Route path='/about' element={<About />}/>
+
+          <Route path='/news' element={<News />}/>
+          <Route path='/news/:id' element={<NewsSingle />}/>
+
+          <Route path='/donate' element={<Paypal />}/>
+        </Route>
       </Routes>
       </DeviceProvider>
     </BrowserRouter>

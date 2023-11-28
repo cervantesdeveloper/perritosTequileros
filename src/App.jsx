@@ -25,20 +25,20 @@ function App() {
       <DeviceProvider>
       <Routes>
         <Route element={<Layout/>}> 
-          <Route path='/' element={<Home />} />
+          <Route index element={<Home />} />
 
-          <Route path='/adopt' element={<AdoptionLayout />}>
-            <Route path='/adopt' element={<Adopt />}/>
-            <Route path='/adopt/process' element={<AdoptProcess />}/>
-            <Route path='/adopt/dogs' element={<AdoptDogs />} />
+          <Route path='adopt' element={<AdoptionLayout />}>
+            <Route index element={<Adopt />}/>
+            <Route path='process' element={<AdoptProcess />}/>
+            <Route path='dogs' element={<AdoptDogs />} />
           </ Route>
 
-          <Route path='/about' element={<About />}/>
+          <Route path='about' element={<About />}/>
 
-          <Route path='/news' element={<News />}/>
-          <Route path='/news/:id' element={<NewsSingle />}/>
+          <Route path='news' element={<News />}/>
+          <Route path='news/:id' element={<NewsSingle />}/>
 
-          <Route path='/donate' element={<Paypal />}/>
+          <Route path='donate' element={<Paypal />}/>
         </Route>
       </Routes>
       </DeviceProvider>

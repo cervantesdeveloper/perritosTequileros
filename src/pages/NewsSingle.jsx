@@ -57,7 +57,7 @@ export default function NewsSingle(){
 
     return(
         <>
-            <HeroPages image="news" alt={note.title}/>
+            <HeroPages image="news" alt={note.title} text="Noticias"/>
             <article className="container article-news">
                 <div className="contain">
                     <h2>{note.title}</h2>

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 
-import HeroPages from "../components/HeroPages"
+
 import NewsFooter from "../components/NewsFooter";
 
 export default function NewsSingle(){
@@ -53,11 +53,11 @@ export default function NewsSingle(){
         getNote("https://perritos.cervantesdeveloper.com/wp-json/wp/v2/posts?_embed");
     }, [params.id])
 
-    console.log(notePrev, noteProx);
+    
 
     return(
         <>
-            <HeroPages image="news" alt={note.title} text="Noticias"/>
+            
             <article className="container article-news">
                 <div className="contain">
                     <h2>{note.title}</h2>
@@ -74,8 +74,8 @@ export default function NewsSingle(){
             <NewsFooter 
                 totalNotes={notesLength}
                 currentNote={currentIndex}
-                prevNews={`/news/${notePrev}`}
-                proxNews={`/news/${noteProx}`}
+                prevNews={`/news/note/${notePrev}`}
+                proxNews={`/news/note/${noteProx}`}
             />
             
         </>

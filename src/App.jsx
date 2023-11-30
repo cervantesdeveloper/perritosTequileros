@@ -8,6 +8,7 @@ import Paypal from './pages/Paypal'
 import NewsSingle from './pages/NewsSingle'
 import AdoptProcess from './pages/adopt/AdoptProcess'
 import AdoptDogs from './pages/adopt/AdoptDogs'
+import NewsLayout from './components/NewsLayout'
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -35,8 +36,11 @@ function App() {
 
           <Route path='about' element={<About />}/>
 
-          <Route path='news' element={<News />}/>
-          <Route path='news/:id' element={<NewsSingle />}/>
+          <Route path='news' element={<NewsLayout />}>
+            <Route index element={<News />}/>
+            <Route path='note/:id' element={<NewsSingle />}/>
+          </Route>
+          
 
           <Route path='donate' element={<Paypal />}/>
         </Route>

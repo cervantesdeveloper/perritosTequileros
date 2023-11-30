@@ -15,7 +15,7 @@ export default function NewsCard({picture, title, date, hour, id}){
                 <p>Hora: {hour}</p>
             </div>
             
-            <TextLink text="Leer Más" link={`/news/${id}`}/>
+            <TextLink text="Leer Más" link={`/news/note/${id}`}/>
         </figure>
     )
 }

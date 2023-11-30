@@ -48,6 +48,8 @@ export default function AdoptHome(){
                                         id={dog.content.rendered.replace("<p>", " ").replace("</p>", "").split(" ")[4]}
                                         picture={dog._embedded["wp:featuredmedia"][0].source_url}
                                         excerpt={dog.excerpt.rendered.replace("<p>", " ").replace("</p>", "")}
+                                        color="orange"
+                                        plusIconColor="orange"
                                     />
                                 )
                                 
@@ -56,7 +58,7 @@ export default function AdoptHome(){
                         )
                 }
                 
-                <ButtonLink text="Verlos a todos" link="/adopt"/>
+                <ButtonLink text="Verlos a todos" link="/adopt/dogs"/>
             </div>
         </div>
     )

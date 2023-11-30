@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import PlusIcon from "./PlusIcon";
 import { useState } from "react";
 
-export default function AdoptCard({name, picture, age, size, genre, id, excerpt}){
+export default function AdoptCard({name, picture, age, size, genre, id, excerpt, color, plusIconColor}){
     let date = new Date;
     let calculatedAge = date.getFullYear() - parseInt(age);
 
@@ -14,7 +14,7 @@ export default function AdoptCard({name, picture, age, size, genre, id, excerpt}
     }
     
     return(
-        <div className="card-adoption">
+        <div className={`card-adoption ${color}`}>
             <div className="card-adoption__title">
                 <h4>{name}</h4>
             </div>
@@ -30,7 +30,7 @@ export default function AdoptCard({name, picture, age, size, genre, id, excerpt}
                 <PlusIcon 
                     plusIconClick={manageClick} 
                     open={moreInfo}
-                    color="white"
+                    color={plusIconColor}
                 />
             </div>
         </div>

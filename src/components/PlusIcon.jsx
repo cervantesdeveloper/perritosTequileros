@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function PlusIcon({plusIconClick, open, color}){
     const styles = {
-        backgroundColor: color === "white" ? "#BF5630" : "#6D7345)"
+        backgroundColor: color === "orange" ? "#BF5630" : "#6D7345"
     }
     return(
         <div 

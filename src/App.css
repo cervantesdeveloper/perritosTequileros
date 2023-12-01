@@ -7,6 +7,7 @@
   --cta: #BF5630;
   --black: #1F2526;
   --green: #6D7345;
+  --shadow: #1F252688;
 
   /*fonts*/
   --font-header: 'Noto Serif JP', serif;
@@ -33,6 +34,11 @@ h4{
 }
 
 /***** Components *****/
+/*about start*/
+.about{
+  color: var(--black);
+}
+/*about end*/
 /*adopt article start*/
 .adopt-article > *{
   /* padding: 2.5rem 1.25rem; */
@@ -744,6 +750,7 @@ p.article-news__date{
   font-size: 16vw;
   line-height: 1;
   color: var(--light-grey);
+  text-shadow: 0 0 .25rem var(--shadow);
 }
 
 @media (min-width: 1024px) {
